@@ -13,9 +13,9 @@
 	<body>
 		<div align = "center">
 			<div class = "header" align = "center">
-			LOGIN |
-			LOGOUT | 
-			JOIN | 
+			<a href="/myhome/login/loginView.jsp">LOGIN </a>|
+			<a href="/myhome/signout/signout.jsp">LOGOUT</a> | 
+			<a href="/myhome/join/joinView.jsp">JOIN</a> | 
 			MY PAGE |
 			BOARD |
 			DOWNLOADS
