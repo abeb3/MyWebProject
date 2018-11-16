@@ -1,22 +1,34 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+   <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%
-	String title = "나의 홈페이지";
+	String titleParam = request.getParameter("title");
+	String title = "My homepage";
+	if(titleParam != null){
+		title = "My homepage :" + titleParam;
+	}
 %>
 <!DOCTYPE html>
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<title><%=title %></title>
+		<title>${param.title != null ? param.title : "My Webpage!"}</title>
 		<link rel="stylesheet" type="text/css" href="/myhome/layout/layout.css">
 	</head>
 	<body>
 		<div align = "center">
 			<div class = "header" align = "center">
-			<a href="/myhome/login/loginView.jsp">LOGIN </a>|
-			<a href="/myhome/signout/signout.jsp">LOGOUT</a> | 
-			<a href="/myhome/join/joinView.jsp">JOIN</a> | 
-			MY PAGE |
+			<c:choose>
+			<c:when test = "${sessionScope.currentNickname == null }">
+			<a href="/myhome/login/loginView.jsp">LOGIN</a> |
+			<a href="/myhome/join/joinView.jsp">JOIN</a> |
+			</c:when>
+			<c:otherwise>
+			${sessionScope.currentNickname }님 | 
+			<a href="/myhome/logout/logoutLogic.jsp">LOGOUT</a> | 
+			<a href="/myhome/mypage/mypageView.jsp">MY PAGE</a> |
+			</c:otherwise>
+			</c:choose>
 			BOARD |
 			DOWNLOADS
 			</div>

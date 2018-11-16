@@ -1,8 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-
-<%@ include file="/layout/header.jsp" %>  
-    
+<jsp:include page="/layout/header.jsp">
+	<jsp:param name="title" value="Find id"/>
+</jsp:include>
 <form action = "findidLogic.jsp" method="post">
 	<table border="1">
 	<caption><h2>아이디 찾기</h2></caption>
@@ -17,4 +17,4 @@
 </form>
 
 
-<%@ include file="/layout/footer.jsp" %>
+<jsp:include page="/layout/footer.jsp"/>
