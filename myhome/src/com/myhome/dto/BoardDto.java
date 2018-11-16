@@ -6,7 +6,7 @@ public class BoardDto {
 	private String content;
 	private String writer;
 	private String nickname;
-	private String hit;
+	private int hit;
 	private String regdate;
 	public int getNum() {
 		return num;
@@ -38,10 +38,10 @@ public class BoardDto {
 	public void setNickname(String nickname) {
 		this.nickname = nickname;
 	}
-	public String getHit() {
+	public int getHit() {
 		return hit;
 	}
-	public void setHit(String hit) {
+	public void setHit(int hit) {
 		this.hit = hit;
 	}
 	public String getRegdate() {

@@ -29,7 +29,9 @@
 			<a href="/myhome/mypage/mypageView.jsp">MY PAGE</a> |
 			</c:otherwise>
 			</c:choose>
-			BOARD |
-			DOWNLOADS
+			<a href="/myhome/board/BoardList.do?page=1">BOARD</a> |
+			DOWNLOADS |
+			<a href = "https://blog.naver.com/abeb3">BLOG</a> |
+			<a href = "https://github.com/abeb3">GITHUB</a>
 			</div>
 			<div class="main" align="center">
